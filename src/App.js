@@ -7,7 +7,7 @@ class App extends React.Component {
         super(props);
 
         this.minSliderPow = 5;
-        this.maxSliderPow = 10;
+        this.maxSliderPow = 14
 
         let initalSliderValues = new Array(this.maxSliderPow - this.minSliderPow + 1);
 
@@ -203,7 +203,7 @@ class App extends React.Component {
 
             <div style={{ flex: 1, height: "100%", padding: "0px 10px 10px 10px" }}>
 
-                {this.state.segmentIndex >= 0 ? <div style={{ border: "2px solid black", width: 500, margin: "auto", padding: 10 }}>
+                {this.state.segmentIndex >= 0 ? <div style={{ border: "2px solid black", width: 700, margin: "auto", padding: 10 }}>
 
                     <h2 style={{ display: "inline-block", margin: "auto" }}>{this.state.segmentIndex >= 0 ? `Segment ${this.state.segmentIndex} Parameters` : "No Segment Selected"}</h2>
 
@@ -221,6 +221,22 @@ class App extends React.Component {
                         <label>Filter</label>
                         <br />
                         {this.getFilterInputs()}
+                    </div>
+
+                    <div style={{ marginBottom: 10 }}>
+                        <label>Overdrive</label>
+                        <br />
+                        <input
+                            type="checkbox"
+                        />
+                    </div>
+
+                    <div style={{ marginBottom: 10 }}>
+                        <label>Tremolo</label>
+                        <br />
+                        <input
+                            type="checkbox"
+                        />
                     </div>
 
                     <div style={{ marginBottom: 10 }}>
